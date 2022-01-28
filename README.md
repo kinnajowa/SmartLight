@@ -1,1 +1,1 @@
-"#SmartLight" 
+#SmartLight
