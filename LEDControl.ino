@@ -6,7 +6,7 @@
 int freq = 5000;
 int wwChannel = 0;
 int cwChannel = 1;
-int resolution = 16;
+int resolution = 12;
 
 BLE BT;
 
@@ -38,14 +38,14 @@ void setup() {
 
 void loop() {
   Serial.println("dimm up.");
-  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
+  for (int dutyCycle = 0; dutyCycle <= 4095; dutyCycle++) {
     ledcWrite(wwChannel, dutyCycle);
     ledcWrite(cwChannel, dutyCycle);
     delay(7);
   }
 
   Serial.println("dimm down.");
-  for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
+  for (int dutyCycle = 4095; dutyCycle >= 0; dutyCycle--) {
     ledcWrite(wwChannel, dutyCycle);
     ledcWrite(cwChannel, dutyCycle);
     delay(7);
