@@ -100,7 +100,7 @@ function CheckVersion(){
     document.getElementById('sw_version').innerHTML = "Software: " + softwareVersion;
   })
   //Grab our version numbers from Github
-  .then(_ => fetch('https://raw.githubusercontent.com/kinnajowa/SmartLigth/main/version.json'))
+  .then(_ => fetch('https://raw.githubusercontent.com/kinnajowa/SmartLight/main/version.json'))
   .then(function (response) {
     // The API call was successful!
     return response.json();
@@ -148,7 +148,7 @@ function PromptUserForUpdate(){
           left: [{
               text: 'Yes',
               action: function () {
-                  fetch('https://raw.githubusercontent.com/kinnajowa/SmartLigth/main/binaries/' + latestCompatibleSoftware + '/' + currentHardwareVersion + '.bin')
+                  fetch('https://raw.githubusercontent.com/kinnajowa/SmartLight/main/binaries/' + latestCompatibleSoftware + '/' + currentHardwareVersion + '.bin')
                 .then(function (response) {
                   return response.arrayBuffer();
                 })
