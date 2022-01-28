@@ -148,7 +148,7 @@ function PromptUserForUpdate(){
           left: [{
               text: 'Yes',
               action: function () {
-                fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
+                  fetch('https://raw.githubusercontent.com/kinnajowa/SmartLigth/main/binaries/' + latestCompatibleSoftware + '/' + currentHardwareVersion + '.bin')
                 .then(function (response) {
                   return response.arrayBuffer();
                 })
