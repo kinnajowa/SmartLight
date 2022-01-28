@@ -40,12 +40,14 @@ void loop() {
   Serial.println("dimm up.");
   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
     ledcWrite(wwChannel, dutyCycle);
+    ledcWrite(cwChannel, dutyCycle);
     delay(7);
   }
 
   Serial.println("dimm down.");
   for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
     ledcWrite(wwChannel, dutyCycle);
+    ledcWrite(cwChannel, dutyCycle);
     delay(7);
   }
 }

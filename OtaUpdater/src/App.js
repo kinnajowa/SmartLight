@@ -100,7 +100,7 @@ function CheckVersion(){
     document.getElementById('sw_version').innerHTML = "Software: " + softwareVersion;
   })
   //Grab our version numbers from Github
-  .then(_ => fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/master/GithubRepo/version.json'))
+  .then(_ => fetch('https://raw.githubusercontent.com/kinnajowa/SmartLigth/main/version.json'))
   .then(function (response) {
     // The API call was successful!
     return response.json();
